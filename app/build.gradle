@@ -1,0 +1,94 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'io.github.publicvaluetech.pubandroidweathersample'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "io.github.publicvaluetech.pubandroidweathersample"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+
+        buildConfigField("String", "brightsky_endpoint_url", brightsky_endpoint_url)
+
+        resConfigs("en", "de")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.4.4'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation platform("com.squareup.okhttp3:okhttp-bom:$rootProject.okhttpBom")
+    implementation platform("androidx.compose:compose-bom:$rootProject.composeBom")
+    androidTestImplementation platform("androidx.compose:compose-bom:$rootProject.composeBom")
+    implementation platform("com.google.firebase:firebase-bom:$rootProject.firebaseBom")
+    implementation "com.google.android.gms:play-services-location:$playServicesLocation"
+
+    implementation "androidx.core:core-ktx:$core_ktx"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle"
+    implementation "androidx.activity:activity-compose:$activity_compose"
+    implementation "androidx.compose.ui:ui"
+    implementation 'androidx.compose.ui:ui-util'
+    implementation "androidx.compose.ui:ui-tooling-preview"
+    implementation 'androidx.compose.material:material'
+    implementation "com.airbnb.android:lottie-compose:$lottie_version"
+    implementation "androidx.datastore:datastore-preferences:$rootProject.dataStore"
+
+    implementation "com.squareup.okhttp3:okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor"
+    testImplementation "com.squareup.okhttp3:mockwebserver"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation "com.squareup.moshi:moshi-adapters:$rootProject.moshi"
+    implementation "com.squareup.moshi:moshi-kotlin:$rootProject.moshi"
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:$rootProject.moshi")
+
+    implementation "androidx.appcompat:appcompat:1.6.1"
+
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    testImplementation "io.mockk:mockk:$rootProject.mockk"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4"
+    debugImplementation "androidx.compose.ui:ui-tooling"
+    debugImplementation "androidx.compose.ui:ui-test-manifest"
+}

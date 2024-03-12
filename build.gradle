@@ -1,0 +1,39 @@
+buildscript {
+    ext {
+        okhttpBom = '4.10.0'
+        composeBom = '2023.04.00'
+
+        compose_ui_version = '1.2.0'
+        lottie_version = '6.3.0'
+        core_ktx = '1.10.0'
+        lifecycle = '2.6.1'
+        activity_compose = '1.7.0'
+        dataStore = '1.0.0'
+
+        retrofit_version = '2.9.0'
+        moshi = '1.14.0'
+        mockk = '1.13.4'
+
+        hilt_version = '2.45'
+
+        google_services = '4.3.15'
+        firebaseBom = '32.1.0'
+        playServicesLocation = '21.0.1'
+    }
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        // Add the dependency for the Google services Gradle plugin
+        classpath "com.google.gms:google-services:$google_services"
+    }
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.4.2' apply false
+    id 'com.android.library' version '7.4.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.10' apply false
+    id 'com.google.dagger.hilt.android' version "$hilt_version" apply false
+    id 'com.google.gms.google-services' version "$google_services" apply false
+}

@@ -1,0 +1,68 @@
+<resources>
+    <!-- general -->
+    <string name="app_name">pub. Weather</string>
+
+    <!-- date formatter -->
+    <string name="today_formatter">Heute - %1$s</string>
+    <string name="tomorrow_formatter">Morgen - %1$s</string>
+    <string name="tomorrow">Morgen</string>
+
+    <!-- weather conditions -->
+    <string name="condition_dry">Trocken</string>
+    <string name="condition_fog">Nebel</string>
+    <string name="condition_rain">Regen</string>
+    <string name="condition_sleet">Schneeregen</string>
+    <string name="condition_snow">Schnee</string>
+    <string name="condition_hail">Hagel</string>
+    <string name="condition_thunderstorm">Gewitter</string>
+    <string name="condition_clear">Wolkenlos</string>
+    <string name="condition_partly_cloudy">Teils bedeckt</string>
+    <string name="condition_cloudy">Bedeckt</string>
+    <string name="condition_wind">Windig</string>
+
+    <!-- weather units -->
+    <string name="temp_celsius_formatter">%1$s°C</string>
+    <string name="temp_formatter">%1$s°</string>
+    <string name="weather_week">Wochenvorhersage</string>
+    <string name="precipitation_probability_formatter">%1$s %%</string>
+    <string name="precipitation_formatter">%1$s l/m²</string>
+    <string name="precipitation_val_formatter">Regen: %1$s %%, %2$s l/m²</string>
+    <string name="wind_formatter">%1$s km/h%2$s</string>
+    <string name="humidity_formatter">%1$s %%</string>
+    <string name="dew_formatter">%1$s°C</string>
+    <string name="visibility_formatter">%1$s m</string>
+    <string name="solar_irradiation_formatter">%1$s kWh/m²</string>
+    <string name="sunshine_formatter">%1$s min</string>
+    <string name="pressure_formatter">%1$s hPa</string>
+    <string name="cloud_cover_formatter">%1$s %%</string>
+    <string name="weather_today">Tagesvorhersage</string>
+    <string name="weather_temp_max">max.</string>
+    <string name="weather_temp_min">min.</string>
+
+    <!-- weather hints -->
+    <string name="hint_precipitation_risk">Wahrscheinlichkeit von mehr als 0,1 mm Niederschlag in der Vorstunde</string>
+    <string name="hint_precipitation">Niederschlag in der letzten Stunde</string>
+    <string name="hint_cloud_cover">Bewölkung</string>
+    <string name="hint_humidity">Relative Luftfeuchtigkeit</string>
+    <string name="hint_wind">Mittlere Windgeschwindigkeit und Windrichtung</string>
+    <string name="hint_wind_gust">Geschwindigkeit der maximalen Windböe während der letzten Stunde und Windrichtung, 10 m über dem Boden</string>
+    <string name="hint_pressure">Atmosphärendruck, auf den mittleren Meeresspiegel reduziert</string>
+    <string name="hint_dew_point">Taupunkt, 2m über dem Boden</string>
+    <string name="hint_visibility">Sichtweite</string>
+    <string name="hint_sunshine">Sonnenschein-Dauer in der letzten Stunde</string>
+    <string name="hint_solar">Sonnen-Einstrahlung in der letzten Stunde</string>
+    <string name="hint_forecast">Vorhersage: %1$s</string>
+
+    <!-- messages -->
+    <string name="permission_denied_explanation">Ohne GPS-Zugriff kann die App Ihren momentanen Standort nicht bestimmen.</string>
+    <string name="no_location_results">Keine Ergebnisse verfügbar - bitte wählen Sie einen Ort in Deutschland.</string>
+    <string name="state_error_offline">Verbindungsprobleme</string>
+    <string name="state_error_offline_desc">Entweder besteht bei Ihrem Smartphone keine oder eine nicht ausreichend schnelle Internetverbindung, oder der Service ist aktuell leider nicht erreichbar.</string>
+    <string name="location_error_availability_msg">Standort derzeit nicht verfügbar. Bitte überprüfen Sie Ihre Einstellungen.</string>
+    <string name="location_error_msg">Leider konnte kein Standort gefunden werden.</string>
+    <string name="location_error_unavailable_msg">Zu diesem Standort haben wir derzeit leider keine Wetterdaten.</string>
+
+    <!-- labels -->
+    <string name="reload_caption">Erneut laden</string>
+    <string name="weather_snackbar_ok">OK</string>
+</resources>

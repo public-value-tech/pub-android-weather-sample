@@ -1,0 +1,67 @@
+{
+  "weather": {
+    "source_id": 18377,
+    "timestamp": "2023-07-28T11:10:00+00:00",
+    "cloud_cover": 100,
+    "condition": "dry",
+    "dew_point": 13.3,
+    "solar_10": 0.019,
+    "solar_30": 0.077,
+    "solar_60": 0.224,
+    "precipitation_10": 0.0,
+    "precipitation_30": 0.0,
+    "precipitation_60": 0.0,
+    "pressure_msl": 1010.2,
+    "relative_humidity": 51,
+    "visibility": 73736,
+    "wind_direction_10": 280,
+    "wind_direction_30": 260,
+    "wind_direction_60": 253,
+    "wind_speed_10": 21.2,
+    "wind_speed_30": 24.5,
+    "wind_speed_60": 22.3,
+    "wind_gust_direction_10": 230,
+    "wind_gust_direction_30": 230,
+    "wind_gust_direction_60": 260,
+    "wind_gust_speed_10": 44.6,
+    "wind_gust_speed_30": 46.1,
+    "wind_gust_speed_60": 46.1,
+    "sunshine_30": 0.0,
+    "sunshine_60": 6.0,
+    "temperature": 24.0,
+    "fallback_source_ids": {
+      "solar_10": 22361,
+      "solar_30": 22361,
+      "solar_60": 22361
+    },
+    "icon": "cloudy"
+  },
+  "sources": [
+    {
+      "id": 18377,
+      "dwd_station_id": "03379",
+      "observation_type": "synop",
+      "lat": 48.1632,
+      "lon": 11.5429,
+      "height": 515.4,
+      "station_name": "Muenchen-Stadt",
+      "wmo_station_id": "10865",
+      "first_record": "2023-07-27T05:30:00+00:00",
+      "last_record": "2023-07-28T11:10:00+00:00",
+      "distance": 3776.0
+    },
+    {
+      "id": 22361,
+      "dwd_station_id": "05404",
+      "observation_type": "synop",
+      "lat": 48.4024,
+      "lon": 11.6946,
+      "height": 477.1,
+      "station_name": "Weihenstephan-Duerna",
+      "wmo_station_id": "10863",
+      "first_record": "2023-07-27T05:30:00+00:00",
+      "last_record": "2023-07-28T11:10:00+00:00",
+      "distance": 30825.0
+    }
+  ]
+}
