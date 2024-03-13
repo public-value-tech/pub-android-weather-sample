@@ -196,7 +196,7 @@ private fun WeatherScreenPreview() {
     ClassicTheme {
         WeatherScreen(
             items = previewItems,
-            autoCompletionItems = previewWeatherSubItemsSearch,
+            autoCompletionItems = emptyList(),
             isLoading = false,
             error = null,
             scaffoldState = rememberScaffoldState(),
@@ -239,7 +239,7 @@ val previewItemWeatherUiModelNow = WeatherUiModel.Now(
     minTemp = "18",
     rainfall = "0,0",
     windSpeed = "14",
-    windDir = "NW",
+    windDir = 25,
     humidity = "87",
     dewPoint = "2",
     visibility = "14536",
@@ -280,7 +280,7 @@ val previewItemWeatherSubItemWeekDay = WeatherSubItem.WeekDay(
     "39",
     "18",
     "22",
-    "5",
+    25,
     "78",
     "-5",
     "13451",

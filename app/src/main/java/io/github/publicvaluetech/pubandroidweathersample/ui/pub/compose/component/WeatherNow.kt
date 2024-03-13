@@ -248,13 +248,13 @@ fun WeatherNow(
                             onClick = { showHint(R.string.hint_visibility) }
                         )
                     }
-                    item.windSpeed?.let {
+                    item.windSpeed?.let {windSpeed ->
                         Tag(
                             iconId = R.drawable.ic_wind_flag_filled,
                             text = stringResource(
                                 id = R.string.wind_formatter,
-                                it,
-                                item.windDir?.let { ", $it°" } ?: ""
+                                windSpeed,
+                                item.windDir?.let { ", ${stringResource(id = WeatherFormatter.getWindDirectionName(it))}" } ?: ""
                             ),
                             onClick = { showHint(R.string.hint_wind) }
                         )

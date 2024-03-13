@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
+import kotlin.math.roundToInt
 
 class WeatherFormatter {
     companion object {
@@ -50,6 +51,30 @@ class WeatherFormatter {
         fun getWeatherIcon(iconName: String?, conditionName: String?): Int {
             val mappedIconName = mapIconName(conditionName, iconName)
             return weatherIcons[mappedIconName] ?: R.raw.lottie_w_overcast
+        }
+
+        // Each wind direction has a width of 22.5° on a 360° circle
+        fun getWindDirectionName(windDirDegrees: Int): Int {
+            val windDirectionName = listOf(
+                R.string.wind_dir_abbr_north,
+                R.string.wind_dir_abbr_northnortheast,
+                R.string.wind_dir_abbr_northeast,
+                R.string.wind_dir_abbr_eastnortheast,
+                R.string.wind_dir_abbr_east,
+                R.string.wind_dir_abbr_eastsoutheast,
+                R.string.wind_dir_abbr_southeast,
+                R.string.wind_dir_abbr_southsoutheast,
+                R.string.wind_dir_abbr_south,
+                R.string.wind_dir_abbr_southsouthwest,
+                R.string.wind_dir_abbr_southwest,
+                R.string.wind_dir_abbr_westsouthwest,
+                R.string.wind_dir_abbr_west,
+                R.string.wind_dir_abbr_westnorthwest,
+                R.string.wind_dir_abbr_northwest,
+                R.string.wind_dir_abbr_northnorthwest,
+                R.string.wind_dir_abbr_north)
+            val value = (windDirDegrees / 22.5).roundToInt()
+            return windDirectionName[value]
         }
 
         /**
