@@ -10,9 +10,9 @@ the [German Meteorological Service - DWD](https://www.dwd.de/EN/ourservices/open
 ## Screenshots
 
 <p align="left">
-<img src="docs/screen01.jpg" width="32%"/>
-<img src="docs/screen02.jpg" width="32%"/>
-<img src="docs/screen03.jpg" width="32%"/>
+<img src="https://github.com/public-value-tech/pub-android-weather-sample/assets/36038891/4a691a6a-588c-4e40-8c54-529899fb9764" width="32%"/>
+<img src="https://github.com/public-value-tech/pub-android-weather-sample/assets/36038891/c2c12839-8465-4497-b589-a806ec562a7a" width="32%"/>
+<img src="https://github.com/public-value-tech/pub-android-weather-sample/assets/36038891/c5d985d1-9341-40a0-bdf2-f79fc1bb9588" width="32%"/>
 </p>
 
 ## Setup
