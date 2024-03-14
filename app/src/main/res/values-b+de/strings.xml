@@ -39,6 +39,24 @@
     <string name="weather_temp_max">max.</string>
     <string name="weather_temp_min">min.</string>
 
+    <!-- wind directions -->
+    <string name="wind_dir_abbr_north">N</string>
+    <string name="wind_dir_abbr_northnortheast">NNO</string>
+    <string name="wind_dir_abbr_northeast">NO</string>
+    <string name="wind_dir_abbr_eastnortheast">ONO</string>
+    <string name="wind_dir_abbr_east">O</string>
+    <string name="wind_dir_abbr_eastsoutheast">OSO</string>
+    <string name="wind_dir_abbr_southeast">SO</string>
+    <string name="wind_dir_abbr_southsoutheast">SSO</string>
+    <string name="wind_dir_abbr_south">S</string>
+    <string name="wind_dir_abbr_southsouthwest">SSW</string>
+    <string name="wind_dir_abbr_southwest">SW</string>
+    <string name="wind_dir_abbr_westsouthwest">WSW</string>
+    <string name="wind_dir_abbr_west">W</string>
+    <string name="wind_dir_abbr_westnorthwest">WNW</string>
+    <string name="wind_dir_abbr_northwest">NW</string>
+    <string name="wind_dir_abbr_northnorthwest">NNW</string>
+
     <!-- weather hints -->
     <string name="hint_precipitation_risk">Wahrscheinlichkeit von mehr als 0,1 mm Niederschlag in der Vorstunde</string>
     <string name="hint_precipitation">Niederschlag in der letzten Stunde</string>

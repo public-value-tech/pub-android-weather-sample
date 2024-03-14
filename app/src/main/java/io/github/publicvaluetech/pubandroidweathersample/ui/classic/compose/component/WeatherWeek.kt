@@ -31,6 +31,7 @@ import io.github.publicvaluetech.pubandroidweathersample.ui.classic.compose.scre
 import io.github.publicvaluetech.pubandroidweathersample.ui.classic.model.WeatherUiModel
 import io.github.publicvaluetech.pubandroidweathersample.ui.classic.theme.ClassicTheme
 import io.github.publicvaluetech.pubandroidweathersample.ui.classic.theme.Theme
+import io.github.publicvaluetech.pubandroidweathersample.ui.classic.theme.WeatherFormatter
 import io.github.publicvaluetech.pubandroidweathersample.ui.classic.theme.noRippleClickable
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -184,14 +185,14 @@ fun WeatherWeek(
                             onClick = { showHint(R.string.hint_visibility) }
                         )
                     }
-                    activeDay?.windSpeed?.let {
+                    activeDay?.windSpeed?.let { windSpeed ->
                         Tag(
                             backgroundColor = Theme.colors.chipBackgroundAlt,
                             iconId = R.drawable.ic_wind_flag_filled,
                             text = stringResource(
                                 id = R.string.wind_formatter,
-                                it,
-                                activeDay?.windDir?.let { ", $it°" } ?: ""
+                                windSpeed,
+                                activeDay?.windDir?.let { ", ${stringResource(id = WeatherFormatter.getWindDirectionName(it))}" } ?: ""
                             ),
                             onClick = { showHint(R.string.hint_wind) }
                         )
