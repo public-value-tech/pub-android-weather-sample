@@ -5,7 +5,7 @@ with [Jetpack Compose](https://developer.android.com/jetpack/compose?gclid=CjwKC
 which uses the [Bright Sky API](https://brightsky.dev/) to get data of
 the [German Meteorological Service - DWD](https://www.dwd.de/EN/ourservices/opendata/opendata.html).
 
-> Note: Only locations inside germany are supported
+> Note: Only locations inside germany are supported for now
 
 ## Screenshots
 
@@ -51,17 +51,17 @@ Rules and guidelines for contributing in this project.
 - Download the forked project using git clone:
 
     ```sh
-    git clone git@github.com:<YOUR_USERNAME>/pub-android-weather-app
+    git clone git@github.com:<YOUR_USERNAME>/<YOUR_FORKED_REPONAME>.git
     ```
 - Create a new branch with a descriptive name:
 
     ```sh
-    git checkout -b my_new_branch
+    git checkout -b feat/<SHORT-FEATURE-NAME>
     ```
     
     Recommended pattern for branch-names & commit-messages:
-    - Feature-branch: ```feat/<short-feature-name>``` e.g.: ```feat/added-new-language```
-    - Bugfix-branch: ```fix/<short-fix-name>``` e.g.: ```fix/fixed-icon-mapping```
+    - Feature-branch: ```feat/<SHORT-FEATURE-NAME>``` e.g.: ```feat/added-new-language```
+    - Bugfix-branch: ```fix/<SHORT-FIX-NAME>``` e.g.: ```fix/fixed-icon-mapping```
     - Commit on feature branch: e.g.: ```Added new language for france```
     - Commit on bugfix branch: e.g.: ```Fixed icon mapping for heavy rain```
     
@@ -69,6 +69,8 @@ Rules and guidelines for contributing in this project.
 - Commit your code and push it to GitHub
 - [Open a new pull request](https://help.github.com/articles/creating-a-pull-request/) and describe the changes you have made.
 - We'll accept your changes after a completed review.
+
+> Note: Do not exceed the number of 500 lines for a pull-request to keep them small and the review easier.
 
 ### Code of Conduct:
 
