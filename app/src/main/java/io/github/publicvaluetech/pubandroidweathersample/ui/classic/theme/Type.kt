@@ -47,10 +47,6 @@ object Type {
     )
 
     // NORMAL
-    val normal200 = TextStyle(
-        fontStyle = FontStyle.Normal,
-        fontSize = 12.sp,
-    )
     val normal250 = TextStyle(
         fontStyle = FontStyle.Normal,
         fontSize = 13.sp,
@@ -75,23 +71,9 @@ object Type {
         fontStyle = FontStyle.Normal,
         fontSize = 24.sp,
     )
-    val normal1200 = TextStyle(
-        fontStyle = FontStyle.Normal,
-        fontSize = 32.sp,
-    )
     val normal1600 = TextStyle(
         fontStyle = FontStyle.Normal,
         fontSize = 48.sp,
-    )
-    val medium400 = TextStyle(
-        fontWeight = FontWeight.Medium,
-        fontStyle = FontStyle.Normal,
-        fontSize = 16.sp,
-    )
-    val medium500 = TextStyle(
-        fontWeight = FontWeight.Medium,
-        fontStyle = FontStyle.Normal,
-        fontSize = 18.sp,
     )
     val medium600 = TextStyle(
         fontWeight = FontWeight.Medium,

@@ -32,7 +32,7 @@ fun WeatherWeekDay(
     item: WeatherSubItem.WeekDay,
     showIndicator: Boolean,
 ) {
-    val bgColor = Theme.colors.chipBackground
+    val bgColor = Theme.colors.primary
     val context = LocalContext.current
     Card(
         shape = RoundedCornerShape(Theme.dimensions.size.cardCornerRadius),

@@ -2,6 +2,8 @@ package io.github.publicvaluetech.pubandroidweathersample.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import io.github.publicvaluetech.pubandroidweathersample.ui.pub.theme.Theme
 
 /**
@@ -17,13 +19,16 @@ enum class WindowSizeClass {
     Compact, Medium, Expanded;
 
     companion object {
+        // Compact | 600dp | Medium | 840dp | Expanded
+        private val compactBreakPoint: Dp = 600.dp
+        private val mediumBreakPoint: Dp = 840.dp
 
         @Composable
         fun current(): WindowSizeClass {
             val screenWidth = LocalConfiguration.current.screenWidthDp
             return when {
-                screenWidth < Theme.dimensions.size.compactBreakPoint.value -> Compact
-                screenWidth < Theme.dimensions.size.mediumBreakPoint.value -> Medium
+                screenWidth < compactBreakPoint.value -> Compact
+                screenWidth < mediumBreakPoint.value -> Medium
                 else -> Expanded
             }
         }

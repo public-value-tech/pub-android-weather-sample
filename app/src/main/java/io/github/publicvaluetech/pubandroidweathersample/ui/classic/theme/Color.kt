@@ -19,8 +19,6 @@ interface Colors {
     val onSurface: Color
     val onError: Color
 
-    val chipBackground: Color
-    val chipBackgroundAlt: Color
     val designBlue: Color
     val designPurple: Color
 }
@@ -39,9 +37,7 @@ object LightColors : Colors {
     override val onSurface: Color = Color.White
     override val onError: Color = Color.White
 
-    override val chipBackground: Color = chipBackgroundLight
-    override val chipBackgroundAlt: Color = chipBackgroundLightAlt
-    override val designBlue: Color = blueLight
+    override val designBlue: Color = primary
     override val designPurple: Color = purpleLight
 }
 
@@ -59,8 +55,6 @@ object DarkColors : Colors {
     override val onSurface: Color = Color.White
     override val onError: Color = Color.Black
 
-    override val chipBackground: Color = chipBackgroundDark
-    override val chipBackgroundAlt: Color = chipBackgroundDarkAlt
     override val designBlue: Color = blueLight
     override val designPurple: Color = purpleLight
 }

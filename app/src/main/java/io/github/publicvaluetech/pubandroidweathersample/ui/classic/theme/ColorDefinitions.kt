@@ -12,8 +12,3 @@ val BackgroundDark = Color(0xBF202730)
 
 val errorColorLight = Color(0xFFB00020)
 val errorColorDark = Color(0xFFCF6679)
-
-val chipBackgroundLight = blueLight
-val chipBackgroundLightAlt = blueDark
-val chipBackgroundDark = blueLight
-val chipBackgroundDarkAlt = blueDark

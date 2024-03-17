@@ -14,8 +14,3 @@ val BackgroundDark = Color(0xBF23053A)
 
 val errorColorLight = Color(0xFFB00020)
 val errorColorDark = Color(0xFFCF6679)
-
-val chipBackgroundLight = purpleLight
-val chipBackgroundLightAlt = purpleDark
-val chipBackgroundDark = purpleLight
-val chipBackgroundDarkAlt = purpleDark

@@ -104,7 +104,7 @@ fun WeatherWeek(
             }
             Column(
                 modifier = modifier
-                    .background(Theme.colors.chipBackground)
+                    .background(Theme.colors.primary)
                     .fillMaxWidth()
             ) {
                 FlowRow(
@@ -118,7 +118,7 @@ fun WeatherWeek(
                 ) {
                     activeDay?.risk?.let {
                         Tag(
-                            backgroundColor = Theme.colors.chipBackgroundAlt,
+                            backgroundColor = Theme.colors.primaryVariant,
                             iconId = R.drawable.ic_umbrella_filled,
                             text = stringResource(
                                 id = R.string.precipitation_probability_formatter,
@@ -129,7 +129,7 @@ fun WeatherWeek(
                     }
                     activeDay?.rainfall?.let {
                         Tag(
-                            backgroundColor = Theme.colors.chipBackgroundAlt,
+                            backgroundColor = Theme.colors.primaryVariant,
                             iconId = R.drawable.ic_rain_filled,
                             text = stringResource(
                                 id = R.string.precipitation_formatter,
@@ -140,7 +140,7 @@ fun WeatherWeek(
                     }
                     activeDay?.cloudCover?.let {
                         Tag(
-                            backgroundColor = Theme.colors.chipBackgroundAlt,
+                            backgroundColor = Theme.colors.primaryVariant,
                             iconId = R.drawable.ic_cloud_cover_filled,
                             text = stringResource(
                                 id = R.string.cloud_cover_formatter,
@@ -151,7 +151,7 @@ fun WeatherWeek(
                     }
                     activeDay?.humidity?.let {
                         Tag(
-                            backgroundColor = Theme.colors.chipBackgroundAlt,
+                            backgroundColor = Theme.colors.primaryVariant,
                             iconId = R.drawable.ic_humidity_filled,
                             text = stringResource(
                                 id = R.string.humidity_formatter,
@@ -162,7 +162,7 @@ fun WeatherWeek(
                     }
                     activeDay?.pressure?.let {
                         Tag(
-                            backgroundColor = Theme.colors.chipBackgroundAlt,
+                            backgroundColor = Theme.colors.primaryVariant,
                             iconId = R.drawable.ic_pressure,
                             text = stringResource(
                                 id = R.string.pressure_formatter,
@@ -173,7 +173,7 @@ fun WeatherWeek(
                     }
                     activeDay?.dewPoint?.let {
                         Tag(
-                            backgroundColor = Theme.colors.chipBackgroundAlt,
+                            backgroundColor = Theme.colors.primaryVariant,
                             iconId = R.drawable.ic_dew_point_filled,
                             text = stringResource(
                                 id = R.string.dew_formatter,
@@ -184,7 +184,7 @@ fun WeatherWeek(
                     }
                     activeDay?.visibility?.let {
                         Tag(
-                            backgroundColor = Theme.colors.chipBackgroundAlt,
+                            backgroundColor = Theme.colors.primaryVariant,
                             iconId = R.drawable.ic_visibility_filled,
                             text = stringResource(
                                 id = R.string.visibility_formatter,
@@ -195,7 +195,7 @@ fun WeatherWeek(
                     }
                     activeDay?.windSpeed?.let {windSpeed ->
                         Tag(
-                            backgroundColor = Theme.colors.chipBackgroundAlt,
+                            backgroundColor = Theme.colors.primaryVariant,
                             iconId = R.drawable.ic_wind_flag_filled,
                             text = stringResource(
                                 id = R.string.wind_formatter,
@@ -207,7 +207,7 @@ fun WeatherWeek(
                     }
                     activeDay?.sunshine?.let {
                         Tag(
-                            backgroundColor = Theme.colors.chipBackgroundAlt,
+                            backgroundColor = Theme.colors.primaryVariant,
                             iconId = R.drawable.ic_sunshine_filled,
                             text = stringResource(
                                 id = R.string.sunshine_formatter,
@@ -218,7 +218,7 @@ fun WeatherWeek(
                     }
                     activeDay?.solarIrradiation?.let {
                         Tag(
-                            backgroundColor = Theme.colors.chipBackgroundAlt,
+                            backgroundColor = Theme.colors.primaryVariant,
                             iconId = R.drawable.ic_energy,
                             text = stringResource(
                                 id = R.string.solar_irradiation_formatter,
