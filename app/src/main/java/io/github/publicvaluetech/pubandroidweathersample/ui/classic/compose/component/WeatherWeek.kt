@@ -2,8 +2,6 @@ package io.github.publicvaluetech.pubandroidweathersample.ui.classic.compose.com
 
 import android.content.res.Configuration
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -18,9 +16,11 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -33,6 +33,7 @@ import io.github.publicvaluetech.pubandroidweathersample.ui.classic.theme.Classi
 import io.github.publicvaluetech.pubandroidweathersample.ui.classic.theme.Theme
 import io.github.publicvaluetech.pubandroidweathersample.ui.classic.theme.WeatherFormatter
 import io.github.publicvaluetech.pubandroidweathersample.ui.classic.theme.noRippleClickable
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -42,9 +43,15 @@ fun WeatherWeek(
     showHint: (Int) -> Unit,
     dismissSearchTextField: () -> Unit,
 ) {
-    val listState = rememberLazyListState()
+    val coroutineScope = rememberCoroutineScope()
+    val weekDayLazyListState = rememberLazyListState()
+    val hoursListState = rememberLazyListState()
     var activeDay by remember { mutableStateOf(item.days.firstOrNull()) }
-    val interactionSource = MutableInteractionSource()
+    LaunchedEffect(item) {
+        activeDay = item.days.firstOrNull()
+        weekDayLazyListState.animateScrollToItem(0)
+        hoursListState.animateScrollToItem(0)
+    }
     Card(
         modifier = Modifier
             .noRippleClickable { dismissSearchTextField() }
@@ -70,7 +77,7 @@ fun WeatherWeek(
                 textAlign = TextAlign.Start
             )
             LazyRow(
-                state = listState,
+                state = weekDayLazyListState,
                 modifier = modifier,
                 contentPadding = PaddingValues(
                     top = Theme.dimensions.space.space300,
@@ -83,11 +90,11 @@ fun WeatherWeek(
                 items(item.days) { item ->
                     WeatherWeekDay(
                         modifier = Modifier
-                            .clickable(
-                                interactionSource = interactionSource,
-                                indication = null
-                            ) {
+                            .noRippleClickable {
                                 activeDay = item
+                                coroutineScope.launch {
+                                    hoursListState.animateScrollToItem(0)
+                                }
                             },
                         item = item,
                         showIndicator = activeDay == item
@@ -228,6 +235,7 @@ fun WeatherWeek(
                         start = Theme.dimensions.space.space400,
                         end = Theme.dimensions.space.space400
                     ),
+                    state = hoursListState,
                     horizontalArrangement = Arrangement.spacedBy(Theme.dimensions.space.space600)
                 )
                 {
