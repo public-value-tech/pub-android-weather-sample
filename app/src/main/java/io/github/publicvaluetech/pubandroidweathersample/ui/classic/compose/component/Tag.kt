@@ -22,7 +22,7 @@ import io.github.publicvaluetech.pubandroidweathersample.ui.classic.theme.Theme
 @Composable
 fun Tag(
     modifier: Modifier = Modifier,
-    backgroundColor: Color = Theme.colors.chipBackground,
+    backgroundColor: Color = Theme.colors.primary,
     contentColor: Color = Theme.colors.onBackground,
     @DrawableRes iconId: Int,
     text: String,
