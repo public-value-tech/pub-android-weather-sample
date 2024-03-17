@@ -13,10 +13,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -47,6 +49,10 @@ fun WeatherNow(
     showHint: (Int) -> Unit,
     dismissSearchTextField: () -> Unit,
 ) {
+    val dailyTimeLazyListState = rememberLazyListState()
+    LaunchedEffect(item) {
+        dailyTimeLazyListState.animateScrollToItem(0)
+    }
     Card(
         modifier = modifier
             .noRippleClickable { dismissSearchTextField() }
@@ -288,6 +294,7 @@ fun WeatherNow(
                         start = Theme.dimensions.space.space400,
                         end = Theme.dimensions.space.space400
                     ),
+                    state = dailyTimeLazyListState,
                     horizontalArrangement = Arrangement.spacedBy(Theme.dimensions.space.space600)
                 ) {
                     items(item.items) { item ->
