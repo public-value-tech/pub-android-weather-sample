@@ -39,4 +39,5 @@ plugins {
     id 'com.google.dagger.hilt.android' version "$hilt" apply false
     id 'com.google.gms.google-services' version "$google_services" apply false
     id 'com.github.ben-manes.versions' version "$ben_manes"
+    id 'com.google.devtools.ksp' version '1.9.22-1.0.17' apply false
 }

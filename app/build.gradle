@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
     id 'com.google.dagger.hilt.android'
     id 'com.google.gms.google-services'
 }
@@ -78,12 +78,12 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-moshi:$rootProject.retrofit"
     implementation "com.squareup.moshi:moshi-adapters:$rootProject.moshi"
     implementation "com.squareup.moshi:moshi-kotlin:$rootProject.moshi"
-    kapt("com.squareup.moshi:moshi-kotlin-codegen:$rootProject.moshi")
+    ksp "com.squareup.moshi:moshi-kotlin-codegen:$rootProject.moshi"
 
     implementation "androidx.appcompat:appcompat:1.6.1"
 
     implementation "com.google.dagger:hilt-android:$rootProject.hilt"
-    kapt "com.google.dagger:hilt-android-compiler:$rootProject.hilt"
+    ksp "com.google.dagger:hilt-android-compiler:$rootProject.hilt"
 
     testImplementation "io.mockk:mockk:$rootProject.mockk"
     testImplementation 'junit:junit:4.13.2'
