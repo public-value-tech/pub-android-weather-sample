@@ -1,11 +1,28 @@
 # Android Weather Sample App
 
-An android weather sample app
-with [Jetpack Compose](https://developer.android.com/jetpack/compose?gclid=CjwKCAiApuCrBhAuEiwA8VJ6Jv6a4ODF3hlsKL1xSl8aBWfprO7tOZ-vFEOYSQh0lT7d1XHemHpnExoCnfIQAvD_BwE&gclsrc=aw.ds)
-which uses the [Bright Sky API](https://brightsky.dev/) to get data of
-the [German Meteorological Service - DWD](https://www.dwd.de/EN/ourservices/opendata/opendata.html).
+<div>
+<img alt="Kotlin Static Badge" src="https://img.shields.io/badge/Kotlin-7f52ff?style=for-the-badge&logo=Kotlin&logoColor=ffffff">
+<img alt="Flows Static Badge" src="https://img.shields.io/badge/Flows-7f52ff?style=for-the-badge">
+<img alt="Coroutines Static Badge" src="https://img.shields.io/badge/Coroutines-7f52ff?style=for-the-badge">
+<img alt="Jetpack Static Badge" src="https://img.shields.io/badge/Jetpack-3983f9?style=for-the-badge&logo=JetpackCompose&logoColor=ffffff">
+<img alt="Compose Static Badge" src="https://img.shields.io/badge/Compose-3983f9?style=for-the-badge">
+<img alt="Datastore Static Badge" src="https://img.shields.io/badge/Datastore-3983f9?style=for-the-badge">
+<img alt="ViewModel Static Badge" src="https://img.shields.io/badge/ViewModel-3983f9?style=for-the-badge">
+<img alt="Android Static Badge" src="https://img.shields.io/badge/Android-34a853?style=for-the-badge&logo=Android&logoColor=ffffff">
+<img alt="Android API Static Badge" src="https://img.shields.io/badge/API%2024%2B-34a853?style=for-the-badge">
+<img alt="Hilt Static Badge" src="https://img.shields.io/badge/Hilt-34a853?style=for-the-badge">
+<img alt="Material Design 2 Static Badge" src="https://img.shields.io/badge/Material%20Design%202-747474?style=for-the-badge&logo=MaterialDesign&logoColor=ffffff">
+<img alt="Lottie Compose Static Badge" src="https://img.shields.io/badge/Lottie Compose-04d1c1?style=for-the-badge&logo=airbnb&logoColor=ffffff">
+<img alt="Moshi Static Badge" src="https://img.shields.io/badge/Moshi-333333?style=for-the-badge&logo=Square&logoColor=ffffff">
+<img alt="Retrofit Static Badge" src="https://img.shields.io/badge/Retrofit-47b983?style=for-the-badge&logo=square&logoColor=ffffff">
+</div>
 
-> Note: Only locations inside germany are supported for now
+---
+
+#### An android weather sample app with [Jetpack Compose](https://developer.android.com/jetpack/compose?gclid=CjwKCAiApuCrBhAuEiwA8VJ6Jv6a4ODF3hlsKL1xSl8aBWfprO7tOZ-vFEOYSQh0lT7d1XHemHpnExoCnfIQAvD_BwE&gclsrc=aw.ds) which uses the [Bright Sky API](https://brightsky.dev/) to get data of the [German Meteorological Service - DWD](https://www.dwd.de/EN/ourservices/opendata/opendata.html).
+
+> [!NOTE]
+> Only locations inside germany are supported for now.
 
 ## Screenshots
 
@@ -15,18 +32,11 @@ the [German Meteorological Service - DWD](https://www.dwd.de/EN/ourservices/open
 <img src="https://github.com/public-value-tech/pub-android-weather-sample/assets/36038891/c5d985d1-9341-40a0-bdf2-f79fc1bb9588" width="32%"/>
 </p>
 
-## Setup
-
-To build the app
-a [google-services.json](https://support.google.com/firebase/answer/7015592?hl=en#android&zippy=%2Cin-this-article) file needs to
-be added to the app folder. Therefore it is necessary to create
-a [firebase](https://support.google.com/appsheet/answer/10104995?hl=en) account.
-
 ## Build with
 
-- [Hilt](http://google.github.io/hilt/)
+- [Hilt](https://developer.android.com/training/dependency-injection/hilt-android)
 - [Kotlin Flows](https://kotlinlang.org/docs/reference/coroutines/flow.html)
-- [Material Design](https://material.io/blog/android-material-theme-color)
+- [Material Design](https://m2.material.io/)
 - [Multiple language support (en, de)](https://developer.android.com/training/basics/supporting-devices/languages)
 - [Jetpack Compose](https://developer.android.com/jetpack/compose?)
 - [Datastore](https://developer.android.com/topic/libraries/architecture/datastore)
@@ -40,6 +50,13 @@ a [firebase](https://support.google.com/appsheet/answer/10104995?hl=en) account.
 - [Layer architecture](https://developer.android.com/topic/architecture#common-principles)
 - [Repository Pattern](https://developer.android.com/codelabs/basic-android-kotlin-training-repository-pattern#0)
 - [MVVM / Clean Architecture](https://medium.com/@ami0275/mvvm-clean-architecture-pattern-in-android-with-use-cases-eff7edc2ef76)
+
+## Setup
+
+To build the app
+a [google-services.json](https://support.google.com/firebase/answer/7015592?hl=en#android&zippy=%2Cin-this-article) file needs to
+be added to the app folder. Therefore it is necessary to create
+a [firebase](https://support.google.com/appsheet/answer/10104995?hl=en) account.
 
 ## Contribute
 
@@ -70,7 +87,8 @@ Rules and guidelines for contributing in this project.
 - [Open a new pull request](https://help.github.com/articles/creating-a-pull-request/) and describe the changes you have made.
 - We'll accept your changes after a completed review.
 
-> Note: Do not exceed the number of 500 lines for a pull-request to keep them small and the review easier.
+> [!IMPORTANT]
+> Do not exceed the number of 500 lines for a pull-request to keep them small and the review easier.
 
 ### Code of Conduct:
 
