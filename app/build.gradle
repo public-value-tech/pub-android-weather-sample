@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
     id 'com.google.dagger.hilt.android'
     id 'com.google.gms.google-services'
 }
@@ -42,9 +42,10 @@ android {
     }
     buildFeatures {
         compose true
+        buildConfig true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.4.4'
+        kotlinCompilerExtensionVersion '1.5.10'
     }
     packagingOptions {
         resources {
@@ -58,31 +59,31 @@ dependencies {
     implementation platform("androidx.compose:compose-bom:$rootProject.composeBom")
     androidTestImplementation platform("androidx.compose:compose-bom:$rootProject.composeBom")
     implementation platform("com.google.firebase:firebase-bom:$rootProject.firebaseBom")
-    implementation "com.google.android.gms:play-services-location:$playServicesLocation"
+    implementation "com.google.android.gms:play-services-location:$rootProject.playServicesLocation"
 
-    implementation "androidx.core:core-ktx:$core_ktx"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle"
-    implementation "androidx.activity:activity-compose:$activity_compose"
+    implementation "androidx.core:core-ktx:$rootProject.core_ktx"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$rootProject.lifecycle"
+    implementation "androidx.activity:activity-compose:$rootProject.activity_compose"
     implementation "androidx.compose.ui:ui"
     implementation 'androidx.compose.ui:ui-util'
     implementation "androidx.compose.ui:ui-tooling-preview"
     implementation 'androidx.compose.material:material'
-    implementation "com.airbnb.android:lottie-compose:$lottie_version"
+    implementation "com.airbnb.android:lottie-compose:$rootProject.lottie"
     implementation "androidx.datastore:datastore-preferences:$rootProject.dataStore"
 
     implementation "com.squareup.okhttp3:okhttp"
     implementation "com.squareup.okhttp3:logging-interceptor"
     testImplementation "com.squareup.okhttp3:mockwebserver"
-    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit"
+    implementation "com.squareup.retrofit2:converter-moshi:$rootProject.retrofit"
     implementation "com.squareup.moshi:moshi-adapters:$rootProject.moshi"
     implementation "com.squareup.moshi:moshi-kotlin:$rootProject.moshi"
-    kapt("com.squareup.moshi:moshi-kotlin-codegen:$rootProject.moshi")
+    ksp "com.squareup.moshi:moshi-kotlin-codegen:$rootProject.moshi"
 
     implementation "androidx.appcompat:appcompat:1.6.1"
 
-    implementation "com.google.dagger:hilt-android:$hilt_version"
-    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    implementation "com.google.dagger:hilt-android:$rootProject.hilt"
+    ksp "com.google.dagger:hilt-android-compiler:$rootProject.hilt"
 
     testImplementation "io.mockk:mockk:$rootProject.mockk"
     testImplementation 'junit:junit:4.13.2'
