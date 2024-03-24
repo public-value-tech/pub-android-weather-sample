@@ -46,19 +46,19 @@ private fun WeatherEntity.toWeatherItemLocation() = WeatherUiModel.Location(
 
 private fun CurrentWeatherEntity.toWeatherItemNow(forecastItems: List<ForecastEntityItem>) = WeatherUiModel.Now(
     icon = this.weather.icon,
-    actualTemp = this.weather.temperature.toString(),
+    actualTemp = this.weather.temperature?.toString(),
     maxTemp = forecastItems.getMaxTempForDate()?.let { forecastMaxTemp ->
         this.weather.temperature?.let { currentTemp ->
-            max(forecastMaxTemp, currentTemp).toString()
+            max(forecastMaxTemp, currentTemp)?.toString()
         }
     },
     minTemp = forecastItems.getMinTempForDate()?.let { forecastMinTemp ->
         this.weather.temperature?.let { currentTemp ->
-            min(forecastMinTemp, currentTemp).toString()
+            min(forecastMinTemp, currentTemp)?.toString()
         }
     },
     condition = this.weather.condition,
-    rainfall = this.weather.precipitation60?.toString() ?: "",
+    rainfall = this.weather.precipitation60?.toString(),
     windSpeed = this.weather.windSpeed60?.toString(),
     windDir = this.weather.windDirection60,
     humidity = this.weather.relativeHumidity?.toString(),
@@ -79,7 +79,7 @@ private fun ForecastEntityItem.toWeatherSubItemHour() = WeatherSubItem.Hour(
     timestamp = timestamp,
     icon = icon,
     condition = condition,
-    temp = temperature?.toString() ?: ""
+    temp = temperature?.toString()
 )
 
 private fun getWeeklyForecast(items: List<ForecastEntityItem>): List<WeatherSubItem.WeekDay> {
@@ -139,7 +139,7 @@ private fun ForecastEntityItem.toWeatherSubItemWeekDay(
                 timestamp = it.timestamp,
                 icon = it.icon,
                 condition = it.condition,
-                temp = it.temperature.toString()
+                temp = it.temperature?.toString()
             )
         }
     )

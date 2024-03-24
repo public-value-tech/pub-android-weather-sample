@@ -34,17 +34,19 @@ fun WeatherHour(modifier: Modifier = Modifier, item: WeatherSubItem.Hour) {
             textAlign = TextAlign.Center
         )
         LottieIcon(WeatherFormatter.getLottieIcon(item.icon, item.condition), Theme.dimensions.size.mediumIcon)
-        Text(
-            modifier = modifier,
-            style = Theme.typography.normal500,
-            text = stringResource(
-                id = R.string.temp_formatter,
-                item.temp
-            ),
-            maxLines = 1,
-            color = Theme.colors.onBackground,
-            textAlign = TextAlign.Center
-        )
+        item.temp?.let {
+            Text(
+                modifier = modifier,
+                style = Theme.typography.normal500,
+                text = stringResource(
+                    id = R.string.temp_formatter,
+                    it
+                ),
+                maxLines = 1,
+                color = Theme.colors.onBackground,
+                textAlign = TextAlign.Center
+            )
+        }
     }
 }
 
