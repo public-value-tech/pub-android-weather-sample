@@ -32,6 +32,10 @@
 <img src="https://github.com/public-value-tech/pub-android-weather-sample/assets/36038891/c5d985d1-9341-40a0-bdf2-f79fc1bb9588" width="32%"/>
 </p>
 
+## Features
+
+Current temperature, Max temperature, Min temperature, Current weather state, Animated weather icons, Precipitation volume, Precipitation risk, Relative Humidity, Wind speed, Wind direction, Dew point, Visibility, Solar irradiation, Sunshine duration, Pressure, Cloud cover, 10 day forecast, Hourly forecast, Auto completion for locations, Set location via device location/gps, Switch between designs, Multiple languages
+
 ## Build with
 
 - [Hilt](https://developer.android.com/training/dependency-injection/hilt-android)

@@ -59,7 +59,7 @@ sealed class WeatherSubItem {
         val timestamp: String,
         val icon: String?,
         val condition: String?,
-        val temp: String,
+        val temp: String?,
     ) : WeatherSubItem()
 
     data class LocationListItem(

@@ -123,8 +123,7 @@ fun WeatherNow(
                                     textAlign = TextAlign.End
                                 )
                             }
-                            Row(
-                            ) {
+                            Row {
                                 item.maxTemp?.let {
                                     Text(
                                         style = Theme.typography.normal800,

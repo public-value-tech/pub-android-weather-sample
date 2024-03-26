@@ -41,7 +41,7 @@ import io.github.publicvaluetech.pubandroidweathersample.ui.classic.theme.Weathe
 import io.github.publicvaluetech.pubandroidweathersample.ui.classic.theme.noRippleClickable
 
 @SuppressLint("CoroutineCreationDuringComposition")
-@OptIn(ExperimentalLayoutApi::class, ExperimentalMaterialApi::class)
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun WeatherNow(
     modifier: Modifier = Modifier,
@@ -123,8 +123,7 @@ fun WeatherNow(
                                     textAlign = TextAlign.End
                                 )
                             }
-                            Row(
-                            ) {
+                            Row {
                                 item.maxTemp?.let {
                                     Text(
                                         style = Theme.typography.normal800,
