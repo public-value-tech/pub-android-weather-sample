@@ -18,4 +18,8 @@ internal class BrightSkyRepositoryImpl(
     override suspend fun fetchCurrentWeatherViaLatLon(lat: String, lon: String) = flow {
         emit(remote.getCurrentWeatherByLatLon(lat, lon))
     }
+
+    override suspend fun fetchWeatherRadarCompressedViaBBox(bBox: Array<Int>?) = flow {
+        emit(remote.getWeatherRadarCompressedByBBox(bBox))
+    }
 }
