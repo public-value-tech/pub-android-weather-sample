@@ -2,6 +2,7 @@ package io.github.publicvaluetech.pubandroidweathersample
 
 import io.github.publicvaluetech.pubandroidweathersample.data.remote.response.CurrentWeatherResponse
 import io.github.publicvaluetech.pubandroidweathersample.data.remote.response.WeatherForecastResponse
+import io.github.publicvaluetech.pubandroidweathersample.data.remote.response.WeatherRadarCompressedResponse
 import io.github.publicvaluetech.pubandroidweathersample.data.repository.BrightSkyRepository
 import kotlinx.coroutines.flow.Flow
 import java.io.InputStreamReader
@@ -16,6 +17,7 @@ object TestUtils {
     internal fun mockRepository(
         flowReturnFetchWeatherViaLatLon: Flow<CurrentWeatherResponse>,
         flowReturnWeatherForecastViaLatLon: Flow<WeatherForecastResponse>,
+        flowReturnWeatherRadarCompressedViaBBox: Flow<WeatherRadarCompressedResponse>,
     ) = object : BrightSkyRepository {
         override suspend fun fetchWeatherForecastViaLatLon(
             lat: String,
@@ -26,5 +28,8 @@ object TestUtils {
 
         override suspend fun fetchCurrentWeatherViaLatLon(lat: String, lon: String): Flow<CurrentWeatherResponse> =
             flowReturnFetchWeatherViaLatLon
+
+        override suspend fun fetchWeatherRadarCompressedViaBBox(bBox: Array<Int>): Flow<WeatherRadarCompressedResponse> =
+            flowReturnWeatherRadarCompressedViaBBox
     }
 }

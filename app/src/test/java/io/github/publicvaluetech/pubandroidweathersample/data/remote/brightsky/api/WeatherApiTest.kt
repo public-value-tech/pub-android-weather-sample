@@ -88,4 +88,20 @@ class WeatherApiTest {
             Assert.assertEquals(400, it.code())
         }
     }
+
+    @Test
+    fun `Get radar data for weather via bbox should Succeed`() = runBlocking {
+        mockWebServer.enqueue(
+            response = MockResponse()
+                .setBody(TestUtils.loadJsonFile("brightsky/weatherradarcompressedjsonresponse.json"))
+                .setResponseCode(200)
+        )
+        val weatherRadarCompressedResponse = api.getWeatherRadarCompressedByBBox(
+            arrayOf(100, 100, 300, 300)
+        )
+        Assert.assertEquals(
+            "RADOLAN::RV::2024-03-27T08:20:00+00:00",
+            weatherRadarCompressedResponse.radar.first().source
+        )
+    }
 }
